@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsInventory.Avalonia", "source\ProductsInventory.Avalonia\ProductsInventory.Avalonia.csproj", "{071B6703-AF15-492D-952E-1EF9F978CE7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsInventory", "source\ProductsInventory\ProductsInventory.csproj", "{A626C103-6330-49C7-BA0F-BDD7EB12CD3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsInventory.View", "source\ProductsInventory.View\ProductsInventory.View.csproj", "{287CDDC7-FBA0-40B1-AE97-4CC7666E9EE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsInventory.Avalonia.Desktop", "source\ProductsInventory.Avalonia.Desktop\ProductsInventory.Avalonia.Desktop.csproj", "{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Avalonia", "Avalonia", "{ED83A578-CC22-4EDB-9923-5160C4841BF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{071B6703-AF15-492D-952E-1EF9F978CE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071B6703-AF15-492D-952E-1EF9F978CE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071B6703-AF15-492D-952E-1EF9F978CE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071B6703-AF15-492D-952E-1EF9F978CE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A626C103-6330-49C7-BA0F-BDD7EB12CD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A626C103-6330-49C7-BA0F-BDD7EB12CD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A626C103-6330-49C7-BA0F-BDD7EB12CD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A626C103-6330-49C7-BA0F-BDD7EB12CD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287CDDC7-FBA0-40B1-AE97-4CC7666E9EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287CDDC7-FBA0-40B1-AE97-4CC7666E9EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287CDDC7-FBA0-40B1-AE97-4CC7666E9EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287CDDC7-FBA0-40B1-AE97-4CC7666E9EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{071B6703-AF15-492D-952E-1EF9F978CE7C} = {ED83A578-CC22-4EDB-9923-5160C4841BF0}
+		{8E8DB59A-0A04-42F3-8F04-EA258AC79B3C} = {ED83A578-CC22-4EDB-9923-5160C4841BF0}
+	EndGlobalSection
+EndGlobal

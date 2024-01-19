@@ -1,0 +1,42 @@
+﻿<Window
+    x:Class="ProductsInventory.Avalonia.Dialogs.CreateProductDialog"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:ProductsInventory.Avalonia.Controls"
+    xmlns:dialogVms="using:ProductsInventory.View.DialogViewModels"
+    Title="Create product"
+    x:DataType="dialogVms:CreateProductDialogViewModel"
+    Classes="Dialog">
+    <DockPanel Classes="ContentStackedVertically">
+        <StackPanel Margin="0,0,0,9">
+            <Label Content="Product name:" />
+            <TextBox Text="{Binding ProductName}" />
+        </StackPanel>
+
+        <controls:LabeledSlider
+            Margin="0,0,0,9"
+            Label="Product quantity"
+            Maximum="500"
+            MeasureUnit="pcs."
+            Minimum="0"
+            ValueForeground="Black"
+            ValueFormat="N0"
+            ValueInt="{Binding ProductQuantity}" />
+
+        <controls:LabeledSlider
+            Margin="0,0,0,9"
+            Label="Product price"
+            Maximum="500"
+            MeasureUnit="rub."
+            Minimum="0"
+            ValueForeground="Black"
+            ValueFormat="N0"
+            ValueInt="{Binding ProductPrice}" />
+
+        <Button
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center"
+            Command="{Binding CreateProductCommand}"
+            Content="Create product" />
+    </DockPanel>
+</Window>

@@ -1,0 +1,71 @@
+﻿<Window
+    x:Class="ProductsInventory.Avalonia.Windows.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:windowVms="using:ProductsInventory.View.WindowViewModels"
+    Title="Products inventory"
+    Width="640"
+    Height="360"
+    Padding="9"
+    x:DataType="windowVms:MainWindowViewModel"
+    CanResize="False"
+    WindowStartupLocation="CenterScreen">
+    <Grid ColumnDefinitions="Auto, *" ShowGridLines="True">
+        <DockPanel
+            Margin="0,0,9,0"
+            VerticalAlignment="Top"
+            Classes="ContentStackedVertically">
+            <TextBlock
+                Margin="0,0,0,6"
+                DockPanel.Dock="Top"
+                Text="Functions" />
+            <Button Command="{Binding CreateProductCommand}" Content="Create product" />
+            <Button Command="{Binding EditProductQuantityCommand}" Content="Edit product quantity" />
+            <Button Command="{Binding DeleteProductCommand}" Content="Delete product" />
+            <DockPanel.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Margin" Value="0,3,0,0" />
+                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DockPanel.Styles>
+        </DockPanel>
+        <DockPanel
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Classes="ContentStackedVertically">
+            <DockPanel Margin="9,0,0,0">
+                <TextBlock Text="Products" />
+                <TextBlock
+                    HorizontalAlignment="Right"
+                    DockPanel.Dock="Right"
+                    Text="{Binding ProductsTotalPrice, StringFormat='Total price: {0:N0} rub.'}" />
+            </DockPanel>
+            <ItemsControl Margin="0,0,9,9" ItemsSource="{Binding Products}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="9,9,0,0"
+                            Padding="9"
+                            Background="Bisque"
+                            CornerRadius="3">
+                            <StackPanel>
+                                <TextBlock
+                                    Margin="0,0,0,6"
+                                    FontWeight="Bold"
+                                    Text="{Binding Name}" />
+                                <TextBlock Margin="0,0,0,6" Text="{Binding Quantity, StringFormat='Quantity: {0} pcs.'}" />
+                                <TextBlock Text="{Binding Price, StringFormat='Price: {0:N0} rub.'}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </DockPanel>
+    </Grid>
+</Window>

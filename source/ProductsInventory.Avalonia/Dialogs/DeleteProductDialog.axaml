@@ -1,0 +1,22 @@
+﻿<Window
+    x:Class="ProductsInventory.Avalonia.Dialogs.DeleteProductDialog"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dialogVms="using:ProductsInventory.View.DialogViewModels"
+    Title="Delete product"
+    MinWidth="384"
+    x:DataType="dialogVms:DeleteProductDialogViewModel"
+    Classes="Dialog">
+    <DockPanel Classes="ContentStackedVertically">
+        <StackPanel Margin="0,0,0,9" Classes="Row">
+            <Label Content="Product name:" />
+            <TextBox Text="{Binding ProductName}" />
+        </StackPanel>
+
+        <Button
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center"
+            Command="{Binding DeleteProductCommand}"
+            Content="Delete product" />
+    </DockPanel>
+</Window>

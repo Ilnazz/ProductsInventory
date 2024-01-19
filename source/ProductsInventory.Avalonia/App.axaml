@@ -1,0 +1,29 @@
+<Application
+    x:Class="ProductsInventory.Avalonia.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dataTemplates="using:ProductsInventory.Avalonia.DataTemplates"
+    RequestedThemeVariant="Default">
+    <Application.DataTemplates>
+        <dataTemplates:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <StyleInclude Source="avares://ProductsInventory.Avalonia/Controls/LabeledSlider.axaml" />
+
+        <Style Selector="Window.Dialog">
+            <Setter Property="SizeToContent" Value="WidthAndHeight" />
+            <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+            <Setter Property="CanResize" Value="False" />
+            <Setter Property="Padding" Value="9" />
+            <Setter Property="MinWidth" Value="384" />
+            <Setter Property="MaxWidth" Value="384" />
+        </Style>
+
+        <Style Selector="DockPanel.ContentStackedVertically &gt; :is(Control)">
+            <Setter Property="DockPanel.Dock" Value="Top" />
+        </Style>
+    </Application.Styles>
+</Application>
